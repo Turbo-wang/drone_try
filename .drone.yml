@@ -9,7 +9,7 @@ steps:
   - echo hello world
 
 - name: fr
-  image: alpine
+  image: maven:3.8-openjdk-17
   volumes:
   - name: cache
     path: /tmp/cache
