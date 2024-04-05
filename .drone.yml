@@ -16,7 +16,7 @@ steps:
   commands:
   - echo bonjour monde
   - cp test.txt /app_build
-  - cp test.txt /app_build/test2.txt
+  - COPY test.txt /app_build/test2.txt
 
 
 volumns:
