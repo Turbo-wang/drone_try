@@ -15,11 +15,9 @@ steps:
     path: /app_build
   commands:
   - echo bonjour monde
-  - pwd
-  - mkdir app_build
-  - cp test.txt /app_build
-  - ls -lart /app_build
-  - cp test.txt /app_build/test2.txt
+  - cp test.txt /drone/src
+  - ls -lart /drone/src
+  - cp test.txt /drone/src/test2.txt
 
 
 volumns:
