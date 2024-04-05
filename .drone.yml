@@ -10,5 +10,8 @@ steps:
 
 - name: fr
   image: alpine
+  volumes:
+  - name: cache
+    path: /tmp/cache
   commands:
   - echo bonjour monde
