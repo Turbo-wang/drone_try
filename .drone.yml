@@ -13,5 +13,7 @@ steps:
   volumes:
   - name: cache
     path: /home/hao_wang_librai_tech/tools/.m2
+  - name: build
+    path: /app/build
   commands:
   - echo bonjour monde
