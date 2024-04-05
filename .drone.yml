@@ -12,10 +12,11 @@ steps:
   image: maven:3.8-openjdk-17
   volumes:
   - name: build
-    path: /app/build
+    path: /app_build
   commands:
   - echo bonjour monde
-  - cp test.txt /app/build
+  - cp test.txt /app_build
+
 
 volumns:
 - name: build
