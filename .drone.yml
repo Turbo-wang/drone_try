@@ -15,6 +15,7 @@ steps:
     path: /app_build
   commands:
   - echo bonjour monde
+  - pwd
   - mkdir app_build
   - cp test.txt /app_build
   - ls -lart /app_build
