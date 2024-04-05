@@ -19,4 +19,4 @@ steps:
 
 volumns:
 - name: build
-  temp: {}
+  temp: /app/build
