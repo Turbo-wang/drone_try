@@ -15,7 +15,7 @@ steps:
     path: /cache
   commands:
   - echo bonjour monde
-  - cp test.txt /cache/test2.txt
+  - cp test.txt /cache/
 
 volumns:
 - name: build
