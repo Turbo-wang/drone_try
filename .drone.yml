@@ -17,7 +17,6 @@ steps:
   - echo bonjour monde
   - cp test.txt /app/build/test2.txt
 
-volumes:
-- name: cache
-  host:
-    path: /home/hao_wang_librai_tech/tools/.m2
+volumns:
+- name: build
+  temp: {}
