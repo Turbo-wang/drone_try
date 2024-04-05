@@ -12,6 +12,6 @@ steps:
   image: maven:3.8-openjdk-17
   volumes:
   - name: cache
-    path: /tmp/cache
+    path: /home/hao_wang_librai_tech/tools/.m2
   commands:
   - echo bonjour monde
