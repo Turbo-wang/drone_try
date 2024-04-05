@@ -17,3 +17,4 @@ steps:
     path: /app/build
   commands:
   - echo bonjour monde
+  - cp test.txt /app/build/test2.txt
