@@ -2,7 +2,7 @@ kind: pipeline
 type: docker
 name: greeting
 
-volumns:
+volumes:
 - name: maven_cache
   host:
     path: /home/hao_wang_librai_tech/.drone_build/repository
