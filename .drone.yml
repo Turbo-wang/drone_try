@@ -11,15 +11,20 @@ steps:
 - name: fr
   image: maven:3.8-openjdk-17
   volumes:
-  - name: build
+  - name: maven_cache
     path: /app_build
   commands:
   - echo bonjour monde
   - cp test.txt /drone/src
   - ls -lart /drone/src
+  - ls -lart /app_build
   - cp test.txt /drone/src/test2.txt
 
 
 volumns:
-- name: build
-  temp: {}
+- name: maven_cache
+  host:
+    path: /home/hao_wang_librai_tech/.drone_build/repository
+- name: maven_build
+  host:
+    path: /home/hao_wang_librai_tech/.drone_build/maven_build
