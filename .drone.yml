@@ -12,12 +12,12 @@ steps:
   image: maven:3.8-openjdk-17
   volumes:
   - name: maven_cache
-    path: /app_build
+    path: /tmp
   commands:
   - echo bonjour monde
   - ls -lart /drone/src
-  - ls -lart /app_build | echo
-  - cp test.txt /app_build/test2.txt
+  - ls -lart /tmp
+  - cp test.txt /tmp/test2.txt
 
 
 volumns:
