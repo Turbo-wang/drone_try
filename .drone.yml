@@ -20,11 +20,9 @@ steps:
   image: maven:3.8-openjdk-17
   volumes:
   - name: maven_cache
-    path: /root/.m2/repository
+    path: /drone/src/repository
   commands:
   - echo bonjour monde
-  - ls -lart /drone/src
-  - ls -lart /root/.m2/repository
-  - cp test.txt /root/.m2/repository/test2.txt
+  - cp test.txt /drone/src/repository/test2.txt
 
 
