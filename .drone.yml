@@ -2,6 +2,14 @@ kind: pipeline
 type: docker
 name: greeting
 
+volumns:
+- name: maven_cache
+  host:
+    path: /home/hao_wang_librai_tech/.drone_build/repository
+- name: maven_build
+  host:
+    path: /home/hao_wang_librai_tech/.drone_build/maven_build
+
 steps:
 - name: en
   image: alpine
@@ -12,18 +20,11 @@ steps:
   image: maven:3.8-openjdk-17
   volumes:
   - name: maven_cache
-    path: /tmp
+    path: /root/.m2/repository
   commands:
   - echo bonjour monde
   - ls -lart /drone/src
-  - ls -lart /tmp
-  - cp test.txt /tmp/test2.txt
+  - ls -lart /root/.m2/repository
+  - cp test.txt /root/.m2/repository/test2.txt
 
 
-volumns:
-- name: maven_cache
-  host:
-    path: /home/hao_wang_librai_tech/.drone_build/repository
-- name: maven_build
-  host:
-    path: /home/hao_wang_librai_tech/.drone_build/maven_build
