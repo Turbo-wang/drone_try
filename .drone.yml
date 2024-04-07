@@ -18,7 +18,7 @@ steps:
   - cp test.txt /drone/src
   - ls -lart /drone/src
   - ls -lart /app_build
-  - cp test.txt /drone/src/test2.txt
+  - cp test.txt /app_build/test2.txt
 
 
 volumns:
