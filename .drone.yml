@@ -15,15 +15,15 @@ steps:
   image: alpine
   commands:
   - echo hello world
-  # - mkdir /drone/src/repository
+  - mkdir -p /drone/src/repository
 
 - name: fr
   image: maven:3.8-openjdk-17
   volumes:
   - name: maven_cache
-    path: /drone/src/repository
+    path: /tmp/cache
   commands:
   - echo bonjour monde
-  - cp test.txt /drone/src/repository/test2.txt
+  - cp test.txt /tmp/cache/test2.txt
 
 
