@@ -15,7 +15,7 @@ steps:
   image: alpine
   commands:
   - echo hello world
-  - mkdir /drone/src/repository
+  # - mkdir /drone/src/repository
 
 - name: fr
   image: maven:3.8-openjdk-17
