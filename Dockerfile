@@ -2,7 +2,7 @@
 # VERSION 0.0.1
 # Author: 
 # Hao Wang
-FROM hello-world:latest
+FROM hello-world
 # 作者
 LABEL maintainer="haowang"
 # VOLUME 指定了临时文件目录为/tmp。

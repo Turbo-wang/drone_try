@@ -28,14 +28,9 @@ steps:
 
 - name: build-image
   image: plugins/docker
-  setting:
-    username:
-      from_secret: docker_username
-    password:
-      from_secret: docker_password
-    dockerfile: ./Dockerfile
-    registry: harbor.librai.tech
-    repo: harbor.librai.tech/aip/try-demo
-    tags: test
+  dockerfile: ./Dockerfile
+  registry: harbor.librai.tech
+  repo: harbor.librai.tech/aip/try-demo
+  tags: test
 
 
