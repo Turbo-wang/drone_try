@@ -21,9 +21,22 @@ steps:
   image: maven:3.8-openjdk-17
   volumes:
   - name: maven_cache
-    path: /tmp/cache
+    path: /root/.m2/repository
   commands:
   - echo bonjour monde
   - cp test.txt /tmp/cache/test2.txt
+
+- name: build-image
+  image: image: plugins/docker
+    depends_on: [build-package]
+    setting:
+      username:
+        from_secret: docker_username
+      password:
+        from_secret: docker_password
+      dockerfile: ./Dockerfile
+      registry: harbor.librai.tech
+      repo: harbor.librai.tech/aip/aip-demo
+      tags: test
 
 
