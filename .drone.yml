@@ -27,8 +27,7 @@ steps:
   - cp test.txt /tmp/cache/test2.txt
 
 - name: build-image
-  image: image: plugins/docker
-    depends_on: [build-package]
+  image: plugins/docker
     setting:
       username:
         from_secret: docker_username
