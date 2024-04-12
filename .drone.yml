@@ -24,7 +24,7 @@ steps:
     path: /root/.m2/repository
   commands:
   - echo bonjour monde
-  - cp test.txt /tmp/cache/test2.txt
+  - cp test.txt /tmp/test2.txt
 
 - name: build-image
   image: plugins/docker
